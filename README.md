@@ -43,5 +43,5 @@ For Linux:
 ```
 1. mkdir build && cd build
 2. cmake .. -DONNXRUNTIME_ROOTDIR=/path/to/your/onnxruntime && make
-3. ./huatai ../model/test.onnx 16
+3. ./huatai ../model/fintech_model.onnx 16
 ```
