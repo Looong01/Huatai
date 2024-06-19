@@ -35,3 +35,13 @@
 
 课题参考资料下载：
 [【量化交易中的深度学习模型高性能推理部署】课题参考资料.zip](https://uploadfiles.nowcoder.com/files/20240530/328440_1717063678881/%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93%E4%B8%AD%E7%9A%84%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%9E%8B%E9%AB%98%E6%80%A7%E8%83%BD%E6%8E%A8%E7%90%86%E9%83%A8%E7%BD%B2%E8%AF%BE%E9%A2%98%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99.zip)
+
+
+
+#### Build & Run
+For Linux:  
+```
+1. mkdir build && cd build
+2. cmake .. -DONNXRUNTIME_ROOTDIR=/path/to/your/onnxruntime && make
+3. ./huatai ../model/test.onnx 16
+```
