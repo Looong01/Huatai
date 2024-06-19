@@ -1,0 +1,81 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile CMake project",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "..",
+                "-DONNXRUNTIME_ROOTDIR=/home/loong/.config/onnxruntime-linux-x64-1.18.0"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Build project with Make",
+            "type": "shell",
+            "command": "make",
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "group": "build"
+        },
+        {
+            "label": "Run ONNX model of float",
+            "type": "shell",
+            "command": "./huatai",
+            "args": [
+                "../fintech_model.onnx",
+                "16"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "group": "test"
+        },
+        {
+            "label": "Run ONNX model of double",
+            "type": "shell",
+            "command": "./huatai_double",
+            "args": [
+                "../fintech_model.onnx",
+                "16"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "group": "test"
+        },
+        {
+            "label": "Clean build directory for Linux",
+            "type": "shell",
+            "command": "rm",
+            "args": [
+                "-rf",
+                "${workspaceFolder}/build/*"
+            ],
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "Clean build directory for Windows",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-Command",
+                "Remove-Item",
+                "${workspaceFolder}/build/*",
+                "-Recurse",
+                "-Force"
+            ],
+            "problemMatcher": [],
+            "group": "build"
+        }
+    ]
+}
