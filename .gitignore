@@ -173,3 +173,7 @@ cython_debug/
 
 
 legacy
+
+Ort
+
+onnxruntime-linux-x64-1.18.1

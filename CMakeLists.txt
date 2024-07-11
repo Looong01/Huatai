@@ -3,7 +3,7 @@ project(ModelInference)
 
 # Set default ONNX Runtime path if not provided
 if(NOT DEFINED ONNXRUNTIME_ROOTDIR)
-    set(ONNXRUNTIME_ROOTDIR "/home/loong/.config/onnxruntime-linux-x64-1.18.0")
+    set(ONNXRUNTIME_ROOTDIR "onnxruntime-linux-x64-1.18.1")
 endif()
 
 # Include directories
