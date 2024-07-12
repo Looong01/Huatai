@@ -7,9 +7,9 @@
 
 
 #### Build & Run
-一、模型转换
-For any system:
-环境配置:
+一、模型转换  
+For any system:  
+环境配置:  
 ```
 1. python -m pip install -U tensorflow onnxruntime tf2onnx
 ```
@@ -19,9 +19,9 @@ For any system:
 2. python -m tf2onnx.convert --saved-model 'fintech_model' --output 'fintech_model.onnx' --tag serve
 ```
 
-二、推理
-For Linux:
-环境配置:
+二、推理  
+For Linux:  
+环境配置:  
 ```
 1. sudo apt update
 2. sudo apt upgrade
@@ -29,13 +29,13 @@ For Linux:
 4. wget "https://github.com/microsoft/onnxruntime/releases/download/v1.18.1/onnxruntime-linux-x64-1.18.1.tgz"
 5. tar zxvf onnxruntime-linux-x64-1.18.1.tgz && rm -f onnxruntime-linux-x64-1.18.1.tgz
 ```
-从源代码构建：
+从源代码构建:  
 ```
 1. mkdir build && cd build
 2. cmake .. -DONNXRUNTIME_ROOTDIR=./onnxruntime-linux-x64-1.18.1.tgz && make
 3. ./huatai ../model/fintech_model.onnx 16
 ```
-测试预构建与生成的可执行文件:`
+测试预构建与生成的可执行文件:  
 ```
 1. ./huatai model/fintech_model.onnx 16
 ```
